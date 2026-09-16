@@ -37,4 +37,14 @@ http: ^1.6.0
 
 
 📌AI used for:
-https://share.gemini.google/r4Pu645UCUDd - explain on searching method for API call
+- https://share.gemini.google/r4Pu645UCUDd - explain on searching method for API call
+
+📌references:
+- https://www.google.com/search?q=flutter+for+provider&rlz=1C1CHBD_enMY1182MY1182&oq=flutter+for+provider&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTIxNzI3ajBqN6gCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+- https://www.google.com/search?q=how+to+read+json+from+cdn+and+store+it+in+local+using+flutter&rlz=1C1CHBD_enMY1182MY1182&oq=how+to+read+json+from+cdn+and+store+it+in+local+using+flutter&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTE4NjYzajBqN6gCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+- https://www.google.com/search?q=how+to+write+initstate+on+flutter&rlz=1C1CHBD_enMY1182MY1182&oq=how+to+write+initstate+on+flutter&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDY1MzVqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+- https://medium.com/@m1nori/flutter-pagination-on-scroll-without-any-packages-v2-906424745bb6
+- https://www.google.com/search?client=opera-gx&q=error+builder+for+image+network+flutter&sourceid=opera&ie=UTF-8&oe=UTF-8
+- https://www.google.com/search?q=how+to+make+refresh+indicator+to+refresh+page+on+flutter&rlz=1C1CHBD_enMY1182MY1182&oq=how+to+make+refresh+indicator+to+refresh+page+on+flutter&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTM2NTU2ajBqN6gCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+- https://github.com/BadrulDev/HelpLink
+- https://www.google.com/search?client=opera-gx&q=how+to+make+skeleton+load+on+flutter&sourceid=opera&ie=UTF-8&oe=UTF-8

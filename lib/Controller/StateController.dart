@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 
 class StateController with ChangeNotifier {
-  bool _isLoading = false;
+  bool _isLoading = true;
   int _limit = 0;
   int _skip = 0;
 
-  bool get isLoggedIn => _isLoading;
+  bool get isLoading => _isLoading;
   int get limit => _limit;
   int get skip => _skip;
 
