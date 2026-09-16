@@ -11,7 +11,7 @@ A Flutter  Project to complete a Technical Assessment for Junior Mobile Applicat
 - Pull-to-refresh ✅
 - Image loading placeholder / error handling ✅
 - unit test for your data or business logic ❌
-- Time-box yourself to approximately 2–3 hours of work ✅
+- Time-box yourself to approximately 2–3 hours of work ✅ 0911 - 1142 (16-09-2026)
 - Minimal Usage AI ✅
 - Original Work ✅
 - Accountability ✅
@@ -21,7 +21,7 @@ A Flutter  Project to complete a Technical Assessment for Junior Mobile Applicat
 - pagination scroll
 - product detail screen
 - unit test
-- footer
+- footer✅
 
 
 
