@@ -4,6 +4,7 @@ import 'dart:convert';
 
 class DataController{
   final List<Product> _items = [];
+  List<Product> get items => _items;
   String? _errorMessage;
 
   Future<bool> getProduct(int limit, int skip) async {
@@ -82,12 +83,14 @@ class DataController{
 class Product {
   final int id;
   final String title;
+  final String description;
   final double price;
   final String thumbnail;
 
   Product({
     required this.id,
     required this.title,
+    required this.description,
     required this.price,
     required this.thumbnail,
   });
@@ -96,6 +99,7 @@ class Product {
     return Product(
       id: json['id'] ?? 0,
       title: json['title'] ?? '',
+      description: json['description'] ?? '',
       price: (json['price'] as num).toDouble(),
       thumbnail: json['thumbnail'] ?? '',
     );

@@ -13,11 +13,18 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   final StateController _stateController = StateController();//for data from provider
   final DataController _dataController = DataController();//for data from CDN provided
+  late List<Product> _items = [];
 
   @override
   void initState() {
     super.initState();
-
+    _stateController.updateLimit(20);
+    _stateController.updateSkip(0);
+    _dataController.getProduct(_stateController.limit, _stateController.skip).then((_) {
+      setState(() {
+        _items = _dataController.items;
+      });
+    });
   }
 
   @override
@@ -59,7 +66,78 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
           ),
-          Container(),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.70,
+            margin: const EdgeInsets.only(bottom: 10),
+            width: double.infinity,
+            child: _items.isEmpty
+                ? const Center(child: CircularProgressIndicator())
+                : ListView.builder(
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  itemCount: _items.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final produce = _items[index];
+                    return Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Image.network(
+                                produce.thumbnail,
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                                errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) =>
+                                const SizedBox(
+                                  width: 100,
+                                  height: 100,
+                                  child: Icon(Icons.broken_image, color: Colors.grey),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    produce.title,
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    produce.description,
+                                    style: const TextStyle(
+                                      fontSize: 8,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    'RM ${produce.price.toStringAsFixed(2)}',
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+
+            )
+          ),
           Container(),
         ],
       ),
