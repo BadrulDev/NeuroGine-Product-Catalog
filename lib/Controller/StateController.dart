@@ -7,6 +7,7 @@ class StateController with ChangeNotifier {
 
   bool get isLoggedIn => _isLoading;
   int get limit => _limit;
+  int get skip => _skip;
 
   void updateLoadingStatus(bool status) {
     _isLoading = status;
