@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../Controller/DataController.dart';
+import '../Controller/StateController.dart';
+
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
@@ -8,6 +11,10 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  final StateController _stateController = StateController();//for data from provider
+  final DataController _dataController = DataController();//for data from CDN provided
+
+
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
